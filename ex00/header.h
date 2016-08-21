@@ -6,7 +6,7 @@
 /*   By: npasquie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/21 03:06:34 by npasquie          #+#    #+#             */
-/*   Updated: 2016/08/21 04:41:52 by npasquie         ###   ########.fr       */
+/*   Updated: 2016/08/21 19:37:00 by npasquie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define HEADER_H
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h> /* !!!!!!!!!!!! */
 
 void			ft_calc(int cursor, char *str);
 void			ft_insert_nb(int pos1, int pos2, char *str, int result);
@@ -38,5 +37,17 @@ typedef struct	s_opp
 	char		*operatorr;
 	int			(*ptr_fonctt)(int, int);
 }				t_opp;
+
+typedef struct	s_calc
+{
+	int			i;
+	int			nb1;
+	int			nb2;
+	int			pos1;
+	int			pos2;
+	int			j;
+	int			result;
+	int			(*ptrfonct)(int, int);
+}				t_calc;
 
 #endif
